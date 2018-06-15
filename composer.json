@@ -8,7 +8,7 @@
         {
             "name": "Bartosz Pasiński",
             "email": "b.pasinski@neurosys.pl"
-        },
+        }
     ],
     "require": {
         "php": ">=5.3.3",
