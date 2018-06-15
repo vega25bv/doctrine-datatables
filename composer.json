@@ -1,6 +1,7 @@
 {
     "name": "vega25bv/doctrine-datatables",
     "description": "Library providing a Doctrine2 wrapper over Datatables.js",
+    "minimum-stability": "stable",
     "type": "library",
     "license": "MIT",
     "authors": [
