@@ -1,5 +1,5 @@
 {
-    "name": "neurosys/doctrine-datatables",
+    "name": "vega25bv/doctrine-datatables",
     "description": "Library providing a Doctrine2 wrapper over Datatables.js",
     "type": "library",
     "license": "MIT",
@@ -7,7 +7,7 @@
         {
             "name": "Bartosz Pasiński",
             "email": "b.pasinski@neurosys.pl"
-        }
+        },
     ],
     "require": {
         "php": ">=5.3.3",

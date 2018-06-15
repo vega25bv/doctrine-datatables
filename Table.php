@@ -215,15 +215,15 @@ class Table extends Entity
 
     public function getResult()
     {
-        return $this->getData('entity');
+        return $this->getData('entity', $formatResults = true);
     }
 
-    public function getArrayResult()
+    public function getArrayResult($formatResults = false)
     {
-        return $this->getData('array');
+        return $this->getData('array', $formatResults);
     }
 
-    public function getData($hydrate = 'array')
+    public function getData($hydrate = 'array', $formatResults = true)
     {
         $query = $this->getResultQueryBuilder()->getQuery();
 
@@ -237,9 +237,10 @@ class Table extends Entity
             $results = $query->getResult();
         }
 
-        foreach ($results as $i => $result) {
-            $results[$i] = $this->formatResult($result, $hydrate);
-        }
+        if($formatResults)
+            foreach ($results as $i => $result) {
+                $results[$i] = $this->formatResult($result, $hydrate);
+            }
         return $results;
     }
 
