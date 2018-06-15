@@ -10,6 +10,12 @@
             "email": "b.pasinski@neurosys.pl"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/vega25bv/doctrine-datatables.git"
+        }
+    ],
     "require": {
         "php": ">=5.3.3",
         "doctrine/orm": "~2.2",
