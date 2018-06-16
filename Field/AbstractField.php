@@ -102,7 +102,7 @@ abstract class AbstractField
 
     public function getSearch()
     {
-        return isset($this->search) ? $this->search : $this->getTable()->getRequest()->get('sSearch', $this->getIndex());
+        return isset($this->search) ? $this->search : $this->getTable()->getRequest()->get("search")['value'];
     }
 
     /**

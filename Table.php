@@ -88,6 +88,7 @@ class Table extends Entity
         $this->setMaxResults($request->get('iDisplayLength'));
         $this->setFirstResult($request->get('iDisplayStart'));
         $this->hints = array();
+        $this->setSearch($request->get("search")['value']);
     }
 
     public function addEntity(Entity $entity)
@@ -445,7 +446,7 @@ class Table extends Entity
      */
     protected function addFilter(QueryBuilder $qb)
     {
-        $andx = $qb->expr()->andX();
+        $andx = $qb->expr()->orX();
         foreach ($this->getFields() as $field) {
             if ($field->isSearch()) {
                 $andx->add($field->filter($qb));
