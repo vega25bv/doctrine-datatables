@@ -88,7 +88,6 @@ class Table extends Entity
         $this->setMaxResults($request->get('iDisplayLength'));
         $this->setFirstResult($request->get('iDisplayStart'));
         $this->hints = array();
-        $this->setSearch($request->get("search")['value']);
     }
 
     public function addEntity(Entity $entity)
